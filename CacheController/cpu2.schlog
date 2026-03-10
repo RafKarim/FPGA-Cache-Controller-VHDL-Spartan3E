@@ -1,0 +1,45 @@
+select figure at 1277 1171 8 -branches -sn=1
+add rect 1312 700 2240 1908 -sn=1
+add autowire 928 1008 1312 1008 8 -sn=1
+add autowire 992 1328 1296 1344 8 -sn=1
+add autowire 976 1536 1312 1552 8 -sn=1
+add autowire 2272 992 2688 992 8 -sn=1
+add autowire 2256 1264 2784 1312 8 -sn=1
+add autowire 2224 1488 2768 1552 8 -sn=1
+undo
+undo
+undo
+undo
+undo
+undo
+add instance acc16 432 1616 R0 -sn=1
+select figure at 617 2171 8 -branches -sn=1
+select figure at 369 781 8 -branches -sn=1
+select all in 369 781 1334 2044 -branches -enclosed -sn=1
+select figure at 710 1369 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1476 1249 8 -branches -sn=1
+add txwin 796 1048 Text_Value 16 -sn=1
+add txwin 440 936 Text_Value 16 -sn=1
+select figure at 460 932 8 -branches -sn=1
+select figure at 829 1051 8 -branches -sn=1
+select figure at 706 973 8 -branches -sn=1
+select all in 706 973 916 1129 -branches -enclosed -sn=1
+select figure at 365 825 8 -branches -sn=1
+select all in 365 825 673 1055 -branches -enclosed -sn=1
+delete selection -sn=1
+select figure at 583 928 8 -branches -sn=1
+select all in 583 928 1162 1293 -branches -enclosed -sn=1
+delete selection -sn=1
+select figure at 1133 727 8 -branches -sn=1
+select all in 1133 727 2386 2029 -branches -enclosed -sn=1
+select figure at 1109 538 8 -branches -sn=1
+select all in 1109 538 2571 2053 -branches -enclosed -sn=1
+select figure at 1014 1458 8 -branches -sn=1
+add txwin 928 1148 Text_Value 16 -sn=1
+select figure at 1436 1269 8 -branches -sn=1
+select all in 1436 1269 1741 1523 -branches -enclosed -sn=1
+select figure at 1239 1376 8 -branches -sn=1
+select all in 1239 1376 1612 1601 -branches -enclosed -sn=1
+select figure at 893 1117 8 -branches -sn=1
+select all in 893 1117 1071 1253 -branches -enclosed -sn=1

@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/student2/ckelsey/coe758/project1/sdram_controller.xst" -ofn "/home/student2/ckelsey/coe758/project1/sdram_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc3s500e-pq208-5 sdram_controller.ngc sdram_controller.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o sdram_controller_map.ncd sdram_controller.ngd sdram_controller.pcf 
+par -w -intstyle ise -ol high -t 1 sdram_controller_map.ncd sdram_controller.ncd sdram_controller.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sdram_controller.twx sdram_controller.ncd -o sdram_controller.twr sdram_controller.pcf 
+bitgen -intstyle ise -f sdram_controller.ut sdram_controller.ncd 

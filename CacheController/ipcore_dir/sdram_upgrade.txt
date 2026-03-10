@@ -1,0 +1,5 @@
+Wed Oct  9 02:37:21 2024
+
+Upgraded sdram from Block Memory Generator 6.2 to Block Memory Generator 6.3
+
+No changes made to parameter values.

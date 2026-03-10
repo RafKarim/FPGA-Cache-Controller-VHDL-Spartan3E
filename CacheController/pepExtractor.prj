@@ -1,0 +1,3 @@
+work	"cache_controller.vhd"
+work	"ipcore_dir/icon.vhd"
+work	"sdram_controller.vhd"

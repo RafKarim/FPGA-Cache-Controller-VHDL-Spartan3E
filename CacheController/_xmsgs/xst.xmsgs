@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/cache_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">icon</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/cache_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">128</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">ila</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/cache_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">129</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">vio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/cache_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">130</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">cache_mem</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1541" delta="new" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/cache_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">131</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">sdram_controller</arg>&gt;. Port &lt;<arg fmt="%s" index="4">wea</arg>&gt; does not match.
+</msg>
+
+<msg type="info" file="Xst" num="1432" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">tag_reg</arg>&gt; may be accessed with a negative index, causing simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">tag_reg</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/cache_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">136</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;cpu_tag&gt;</arg>
+</msg>
+
+<msg type="info" file="Xst" num="1432" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">tag_reg</arg>&gt; may be accessed with a negative index, causing simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">tag_reg</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1432" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">tag_reg</arg>&gt; may be accessed with a negative index, causing simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">tag_reg</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/cache_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">338</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/cache_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">339</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">/home/student2/ckelsey/coe758/project1/sdram_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">59</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">sdram</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">empty</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">counter</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">vio_sig&lt;25:22&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">ila_data&lt;99:93&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">ila_data&lt;23&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">dirty_sig</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">clk_counter</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="1439" delta="new" >HDL ADVISOR - You may have used signed signal(s) to address this RAM. If that is the case, negative values being out of range, sign bits were ignored. As a result only the first half of the RAM is actually accessed. Please check your source code.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_tag_reg</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+<msg type="warning" file="Xst" num="1415" delta="new" >No path found for this constraint.
+</msg>
+
+<msg type="warning" file="Xst" num="1415" delta="new" >No path found for this constraint.
+</msg>
+
+<msg type="warning" file="Xst" num="1415" delta="new" >No path found for this constraint.
+</msg>
+
+</messages>
+

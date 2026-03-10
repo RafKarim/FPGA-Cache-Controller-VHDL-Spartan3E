@@ -1,0 +1,1521 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+/CMC/tools/xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3
+-s 5 -n 3 -fastpaths -xml cache_controller.twx cache_controller.ncd -o
+cache_controller.twr cache_controller.pcf
+
+Design file:              cache_controller.ncd
+Physical constraint file: cache_controller.pcf
+Device,package,speed:     xc3s500e,pq208,-5 (PRODUCTION 1.27 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: PATH "TS_D2_TO_T2_path" TIG;
+
+ 3 paths analyzed, 3 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (SLICE_X52Y88.G3), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     5.444ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      5.444ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<13> falling
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y85.YQ      Tcklo                 0.646   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X50Y84.F2      net (fanout=1)        0.376   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X50Y84.X       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat1
+    SLICE_X50Y85.G1      net (fanout=2)        0.125   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X50Y85.X       Tif5x                 1.000   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91_F
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91
+    SLICE_X48Y84.G2      net (fanout=1)        0.377   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91
+    SLICE_X48Y84.X       Tif5x                 1.000   sys_ila/U0/I_YES_D.U_ILA/U_STAT/TDO_mux_in<0>1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f5
+    SLICE_X52Y88.G3      net (fanout=1)        0.484   sys_ila/U0/I_YES_D.U_ILA/U_STAT/TDO_mux_in<0>1
+    SLICE_X52Y88.CLK     Tgck                  0.776   sys_ila/U0/I_YES_D.U_ILA/iSTAT_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      5.444ns (4.082ns logic, 1.362ns route)
+                                                       (75.0% logic, 25.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE (SLICE_X51Y83.BY), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     2.397ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE (FF)
+  Data Path Delay:      2.397ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<13> falling
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y85.YQ      Tcklo                 0.646   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X50Y84.F2      net (fanout=1)        0.376   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X50Y84.X       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat1
+    SLICE_X51Y83.BY      net (fanout=2)        0.401   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X51Y83.CLK     Tdick                 0.314   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    -------------------------------------------------  ---------------------------
+    Total                                      2.397ns (1.620ns logic, 0.777ns route)
+                                                       (67.6% logic, 32.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE (SLICE_X50Y84.F2), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     1.798ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE (FF)
+  Data Path Delay:      1.798ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<13> falling
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y85.YQ      Tcklo                 0.646   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X50Y84.F2      net (fanout=1)        0.376   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X50Y84.CLK     Tfck                  0.776   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    -------------------------------------------------  ---------------------------
+    Total                                      1.798ns (1.422ns logic, 0.376ns route)
+                                                       (79.1% logic, 20.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_D2_TO_T2_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE (SLICE_X50Y84.F2), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      1.305ns (datapath - clock path skew - uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE (FF)
+  Data Path Delay:      1.305ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<13> falling
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y85.YQ      Tcklo                 0.517   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X50Y84.F2      net (fanout=1)        0.301   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X50Y84.CLK     Tckf        (-Th)    -0.487   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    -------------------------------------------------  ---------------------------
+    Total                                      1.305ns (1.004ns logic, 0.301ns route)
+                                                       (76.9% logic, 23.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE (SLICE_X51Y83.BY), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      1.784ns (datapath - clock path skew - uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE (FF)
+  Data Path Delay:      1.784ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<13> falling
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y85.YQ      Tcklo                 0.517   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X50Y84.F2      net (fanout=1)        0.301   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X50Y84.X       Tilo                  0.528   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat1
+    SLICE_X51Y83.BY      net (fanout=2)        0.321   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X51Y83.CLK     Tckdi       (-Th)    -0.117   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    -------------------------------------------------  ---------------------------
+    Total                                      1.784ns (1.162ns logic, 0.622ns route)
+                                                       (65.1% logic, 34.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (SLICE_X52Y88.G3), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      4.223ns (datapath - clock path skew - uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      4.223ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<13> falling
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y85.YQ      Tcklo                 0.517   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X50Y84.F2      net (fanout=1)        0.301   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X50Y84.X       Tilo                  0.528   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat1
+    SLICE_X50Y85.G1      net (fanout=2)        0.100   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X50Y85.X       Tif5x                 0.800   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91_F
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91
+    SLICE_X48Y84.G2      net (fanout=1)        0.302   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91
+    SLICE_X48Y84.X       Tif5x                 0.800   sys_ila/U0/I_YES_D.U_ILA/U_STAT/TDO_mux_in<0>1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f5
+    SLICE_X52Y88.G3      net (fanout=1)        0.388   sys_ila/U0/I_YES_D.U_ILA/U_STAT/TDO_mux_in<0>1
+    SLICE_X52Y88.CLK     Tckg        (-Th)    -0.487   sys_ila/U0/I_YES_D.U_ILA/iSTAT_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      4.223ns (3.132ns logic, 1.091ns route)
+                                                       (74.2% logic, 25.8% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J2_TO_D2_path" TIG;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J3_TO_D2_path" TIG;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J4_TO_D2_path" TIG;
+
+ 11 paths analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (SLICE_X52Y85.CLK), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.294ns (data path)
+  Source:               sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      5.294ns (Levels of Logic = 2)
+  Source Clock:         control0<0> rising at 0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y88.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iCORE_ID<1>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET
+    SLICE_X55Y88.F2      net (fanout=6)        1.210   sys_icon/U0/U_ICON/iCORE_ID<0>
+    SLICE_X55Y88.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+                                                       sys_icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT
+    SLICE_X52Y82.G4      net (fanout=29)       1.706   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+    SLICE_X52Y82.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE
+    SLICE_X52Y85.CLK     net (fanout=5)        0.539   control0<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      5.294ns (1.839ns logic, 3.455ns route)
+                                                       (34.7% logic, 65.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     5.064ns (data path)
+  Source:               sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      5.064ns (Levels of Logic = 2)
+  Source Clock:         control0<0> rising at 0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y88.XQ      Tcko                  0.515   sys_icon/U0/U_ICON/iCORE_ID<1>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET
+    SLICE_X55Y88.F1      net (fanout=6)        1.032   sys_icon/U0/U_ICON/iCORE_ID<1>
+    SLICE_X55Y88.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+                                                       sys_icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT
+    SLICE_X52Y82.G4      net (fanout=29)       1.706   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+    SLICE_X52Y82.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE
+    SLICE_X52Y85.CLK     net (fanout=5)        0.539   control0<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      5.064ns (1.787ns logic, 3.277ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.624ns (data path)
+  Source:               sys_icon/U0/U_ICON/U_CMD/G_TARGET[14].I_NE0.U_TARGET (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      4.624ns (Levels of Logic = 2)
+  Source Clock:         control0<0> rising at 0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_CMD/G_TARGET[14].I_NE0.U_TARGET to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y87.YQ      Tcko                  0.511   sys_icon/U0/U_ICON/iCORE_ID<3>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[14].I_NE0.U_TARGET
+    SLICE_X55Y88.F4      net (fanout=6)        0.596   sys_icon/U0/U_ICON/iCORE_ID<2>
+    SLICE_X55Y88.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+                                                       sys_icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT
+    SLICE_X52Y82.G4      net (fanout=29)       1.706   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+    SLICE_X52Y82.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE
+    SLICE_X52Y85.CLK     net (fanout=5)        0.539   control0<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.624ns (1.783ns logic, 2.841ns route)
+                                                       (38.6% logic, 61.4% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "J_CLK" 
+15 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 18 paths analyzed, 18 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.142ns.
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET (SLICE_X52Y84.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    11.858ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          sys_icon/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.142ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sys_icon/U0/iUPDATE_OUT rising
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_iDATA_CMD to sys_icon/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X66Y90.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X64Y87.G1      net (fanout=7)        0.760   sys_icon/U0/U_ICON/iDATA_CMD
+    SLICE_X64Y87.Y       Tilo                  0.660   sys_icon/U0/U_ICON/U_STAT/iDATA_VALID
+                                                       sys_icon/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X52Y84.CE      net (fanout=5)        0.672   sys_icon/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X52Y84.CLK     Tceck                 0.483   sys_icon/U0/U_ICON/U_CMD/iTARGET<9>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      3.142ns (1.710ns logic, 1.432ns route)
+                                                       (54.4% logic, 45.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET (SLICE_X52Y84.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    11.858ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          sys_icon/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.142ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sys_icon/U0/iUPDATE_OUT rising
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_iDATA_CMD to sys_icon/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X66Y90.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X64Y87.G1      net (fanout=7)        0.760   sys_icon/U0/U_ICON/iDATA_CMD
+    SLICE_X64Y87.Y       Tilo                  0.660   sys_icon/U0/U_ICON/U_STAT/iDATA_VALID
+                                                       sys_icon/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X52Y84.CE      net (fanout=5)        0.672   sys_icon/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X52Y84.CLK     Tceck                 0.483   sys_icon/U0/U_ICON/U_CMD/iTARGET<9>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      3.142ns (1.710ns logic, 1.432ns route)
+                                                       (54.4% logic, 45.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET (SLICE_X65Y84.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    12.006ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          sys_icon/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      2.994ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sys_icon/U0/iUPDATE_OUT rising
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_iDATA_CMD to sys_icon/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X66Y90.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X64Y87.G1      net (fanout=7)        0.760   sys_icon/U0/U_ICON/iDATA_CMD
+    SLICE_X64Y87.Y       Tilo                  0.660   sys_icon/U0/U_ICON/U_STAT/iDATA_VALID
+                                                       sys_icon/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X65Y84.CE      net (fanout=5)        0.524   sys_icon/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X65Y84.CLK     Tceck                 0.483   sys_icon/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      2.994ns (1.710ns logic, 1.284ns route)
+                                                       (57.1% logic, 42.9% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "J_CLK" 15 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[3].I_NE0.U_FDR (SLICE_X65Y90.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.510ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[3].I_NE0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.510ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sys_icon/U0/iUPDATE_OUT rising
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_icon/U0/U_ICON/U_iDATA_CMD to sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[3].I_NE0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X66Y90.YQ      Tcko                  0.454   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X65Y90.SR      net (fanout=7)        0.565   sys_icon/U0/U_ICON/iDATA_CMD
+    SLICE_X65Y90.CLK     Tcksr       (-Th)    -0.491   sys_icon/U0/U_ICON/U_SYNC/iSYNC_WORD<3>
+                                                       sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[3].I_NE0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      1.510ns (0.945ns logic, 0.565ns route)
+                                                       (62.6% logic, 37.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[2].I_NE0.U_FDR (SLICE_X65Y90.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.510ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[2].I_NE0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.510ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sys_icon/U0/iUPDATE_OUT rising
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_icon/U0/U_ICON/U_iDATA_CMD to sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[2].I_NE0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X66Y90.YQ      Tcko                  0.454   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X65Y90.SR      net (fanout=7)        0.565   sys_icon/U0/U_ICON/iDATA_CMD
+    SLICE_X65Y90.CLK     Tcksr       (-Th)    -0.491   sys_icon/U0/U_ICON/U_SYNC/iSYNC_WORD<3>
+                                                       sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[2].I_NE0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      1.510ns (0.945ns logic, 0.565ns route)
+                                                       (62.6% logic, 37.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[5].I_NE0.U_FDR (SLICE_X65Y89.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.683ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[5].I_NE0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.683ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sys_icon/U0/iUPDATE_OUT rising
+  Destination Clock:    control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_icon/U0/U_ICON/U_iDATA_CMD to sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[5].I_NE0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X66Y90.YQ      Tcko                  0.454   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X65Y89.SR      net (fanout=7)        0.738   sys_icon/U0/U_ICON/iDATA_CMD
+    SLICE_X65Y89.CLK     Tcksr       (-Th)    -0.491   sys_icon/U0/U_ICON/U_SYNC/iSYNC_WORD<5>
+                                                       sys_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[5].I_NE0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      1.683ns (0.945ns logic, 0.738ns route)
+                                                       (56.1% logic, 43.9% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "U_CLK" 
+15 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.465ns.
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_iDATA_CMD (SLICE_X66Y90.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    13.535ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      1.465ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sys_icon/U0/iUPDATE_OUT rising
+  Destination Clock:    sys_icon/U0/iUPDATE_OUT rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_iDATA_CMD to sys_icon/U0/U_ICON/U_iDATA_CMD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X66Y90.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X66Y90.BY      net (fanout=7)        0.565   sys_icon/U0/U_ICON/iDATA_CMD
+    SLICE_X66Y90.CLK     Tdick                 0.333   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    -------------------------------------------------  ---------------------------
+    Total                                      1.465ns (0.900ns logic, 0.565ns route)
+                                                       (61.4% logic, 38.6% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "U_CLK" 15 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_iDATA_CMD (SLICE_X66Y90.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.038ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          sys_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.038ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sys_icon/U0/iUPDATE_OUT rising
+  Destination Clock:    sys_icon/U0/iUPDATE_OUT rising
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_icon/U0/U_ICON/U_iDATA_CMD to sys_icon/U0/U_ICON/U_iDATA_CMD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X66Y90.YQ      Tcko                  0.454   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    SLICE_X66Y90.BY      net (fanout=7)        0.452   sys_icon/U0/U_ICON/iDATA_CMD
+    SLICE_X66Y90.CLK     Tckdi       (-Th)    -0.132   sys_icon/U0/U_ICON/iDATA_CMD
+                                                       sys_icon/U0/U_ICON/U_iDATA_CMD
+    -------------------------------------------------  ---------------------------
+    Total                                      1.038ns (0.586ns logic, 0.452ns route)
+                                                       (56.5% logic, 43.5% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J_TO_D_path" TIG;
+
+ 393 paths analyzed, 172 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE (SLICE_X49Y72.SR), 4 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y74.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U0_MUXF5
+    SLICE_X44Y74.FXINA   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<0>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y72.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y72.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<6>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y74.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U0_MUXF5
+    SLICE_X44Y74.FXINA   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<0>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y72.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y72.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<6>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y75.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<1>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF1_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U1_MUXF5
+    SLICE_X44Y74.FXINB   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<1>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y72.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y72.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<6>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE (SLICE_X49Y72.SR), 4 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y74.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U0_MUXF5
+    SLICE_X44Y74.FXINA   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<0>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y72.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y72.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<6>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y74.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U0_MUXF5
+    SLICE_X44Y74.FXINA   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<0>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y72.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y72.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<6>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y75.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<1>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF1_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U1_MUXF5
+    SLICE_X44Y74.FXINB   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<1>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y72.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y72.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<6>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE (SLICE_X49Y73.SR), 4 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y74.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U0_MUXF5
+    SLICE_X44Y74.FXINA   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<0>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y73.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y73.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<8>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y74.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF0_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG0_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U0_MUXF5
+    SLICE_X44Y74.FXINA   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<0>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y73.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y73.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<8>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     5.918ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4 (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE (FF)
+  Data Path Delay:      5.918ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4 to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y75.F5      Tregf5                3.509   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<1>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UF1_CFGLUT4.CE
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.UG1_CFGLUT4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.U1_MUXF5
+    SLICE_X44Y74.FXINB   net (fanout=1)        0.000   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/jO<1>
+    SLICE_X44Y74.Y       Tif6y                 0.354   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST/I_NOLUT6.I_SRL_T2.I_YES_RPM.I_NO_OREG.U_MUXF6
+    SLICE_X49Y73.SR      net (fanout=5)        1.261   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/SCNT_RESET
+    SLICE_X49Y73.CLK     Tsrck                 0.794   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iSCNT<8>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      5.918ns (4.657ns logic, 1.261ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_J_TO_D_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_iCAP_ADDR (SLICE_X48Y70.F3), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      1.180ns (datapath - clock path skew - uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[1].U_SEL (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_iCAP_ADDR (FF)
+  Data Path Delay:      1.180ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[1].U_SEL to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_iCAP_ADDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y68.XQ      Tcko                  0.412   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<2>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[1].U_SEL
+    SLICE_X48Y70.F3      net (fanout=2)        0.281   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<2>
+    SLICE_X48Y70.CLK     Tckf        (-Th)    -0.487   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iCAP_ADDR<1>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_CAP_ADDR_MUX
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_iCAP_ADDR
+    -------------------------------------------------  ---------------------------
+    Total                                      1.180ns (0.899ns logic, 0.281ns route)
+                                                       (76.2% logic, 23.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_iCAP_ADDR (SLICE_X47Y71.G4), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      1.151ns (datapath - clock path skew - uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[6].U_SEL (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_iCAP_ADDR (FF)
+  Data Path Delay:      1.151ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[6].U_SEL to sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_iCAP_ADDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y70.YQ      Tcko                  0.409   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<8>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[6].U_SEL
+    SLICE_X47Y71.G4      net (fanout=2)        0.294   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<7>
+    SLICE_X47Y71.CLK     Tckg        (-Th)    -0.448   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iCAP_ADDR<7>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_CAP_ADDR_MUX
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_iCAP_ADDR
+    -------------------------------------------------  ---------------------------
+    Total                                      1.151ns (0.857ns logic, 0.294ns route)
+                                                       (74.5% logic, 25.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0 (SLICE_X47Y89.BY), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.856ns (datapath - clock path skew - uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_TFDRE (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0 (FF)
+  Data Path Delay:      0.856ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_TFDRE to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y88.YQ      Tcko                  0.409   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/din_latched
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_TFDRE
+    SLICE_X47Y89.BY      net (fanout=1)        0.330   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/din_latched
+    SLICE_X47Y89.CLK     Tckdi       (-Th)    -0.117   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/iDIN<1>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.856ns (0.526ns logic, 0.330ns route)
+                                                       (61.4% logic, 38.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_D_TO_J_path" TIG;
+
+ 4652 paths analyzed, 761 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (SLICE_X52Y88.G1), 687 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     12.422ns (data path - clock path skew + uncertainty)
+  Source:               sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      12.422ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y88.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iCORE_ID<1>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET
+    SLICE_X55Y88.F2      net (fanout=6)        1.210   sys_icon/U0/U_ICON/iCORE_ID<0>
+    SLICE_X55Y88.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+                                                       sys_icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT
+    SLICE_X51Y74.G3      net (fanout=29)       1.427   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+    SLICE_X51Y74.Y       Tilo                  0.612   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCE/iCFG_DIN
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE
+    SLICE_X55Y81.G4      net (fanout=47)       1.569   control0<9>
+    SLICE_X55Y81.COUT    Topcyg                0.871   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_lut<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<2>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<4>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<6>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.XB      Tcinxb                0.352   control0<35>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y88.F3      net (fanout=3)        0.800   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y88.X       Tif5x                 1.000   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5_G
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+    SLICE_X50Y87.G2      net (fanout=1)        0.346   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+    SLICE_X50Y87.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O21_SW0
+    SLICE_X50Y87.F3      net (fanout=1)        0.020   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O21_SW0/O
+    SLICE_X50Y87.X       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+    SLICE_X52Y88.G1      net (fanout=1)        0.631   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+    SLICE_X52Y88.CLK     Tgck                  0.776   sys_ila/U0/I_YES_D.U_ILA/iSTAT_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                     12.422ns (6.419ns logic, 6.003ns route)
+                                                       (51.7% logic, 48.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     12.192ns (data path - clock path skew + uncertainty)
+  Source:               sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      12.192ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y88.XQ      Tcko                  0.515   sys_icon/U0/U_ICON/iCORE_ID<1>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET
+    SLICE_X55Y88.F1      net (fanout=6)        1.032   sys_icon/U0/U_ICON/iCORE_ID<1>
+    SLICE_X55Y88.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+                                                       sys_icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT
+    SLICE_X51Y74.G3      net (fanout=29)       1.427   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+    SLICE_X51Y74.Y       Tilo                  0.612   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCE/iCFG_DIN
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE
+    SLICE_X55Y81.G4      net (fanout=47)       1.569   control0<9>
+    SLICE_X55Y81.COUT    Topcyg                0.871   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_lut<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<2>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<4>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<6>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.XB      Tcinxb                0.352   control0<35>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y88.F3      net (fanout=3)        0.800   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y88.X       Tif5x                 1.000   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5_G
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+    SLICE_X50Y87.G2      net (fanout=1)        0.346   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+    SLICE_X50Y87.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O21_SW0
+    SLICE_X50Y87.F3      net (fanout=1)        0.020   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O21_SW0/O
+    SLICE_X50Y87.X       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+    SLICE_X52Y88.G1      net (fanout=1)        0.631   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+    SLICE_X52Y88.CLK     Tgck                  0.776   sys_ila/U0/I_YES_D.U_ILA/iSTAT_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                     12.192ns (6.367ns logic, 5.825ns route)
+                                                       (52.2% logic, 47.8% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     11.889ns (data path - clock path skew + uncertainty)
+  Source:               sys_icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      11.889ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_SYNC/U_SYNC to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y86.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iSYNC
+                                                       sys_icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X67Y86.F1      net (fanout=2)        0.490   sys_icon/U0/U_ICON/iSYNC
+    SLICE_X67Y86.X       Tilo                  0.612   sys_icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X51Y74.G1      net (fanout=33)       1.614   sys_icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X51Y74.Y       Tilo                  0.612   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCE/iCFG_DIN
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE
+    SLICE_X55Y81.G4      net (fanout=47)       1.569   control0<9>
+    SLICE_X55Y81.COUT    Topcyg                0.871   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_lut<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<2>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<4>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<6>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.XB      Tcinxb                0.352   control0<35>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y88.F3      net (fanout=3)        0.800   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y88.X       Tif5x                 1.000   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5_G
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+    SLICE_X50Y87.G2      net (fanout=1)        0.346   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/U_CS_MUX/I6.U_MUX64/Mmux_O_15_f5
+    SLICE_X50Y87.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O21_SW0
+    SLICE_X50Y87.F3      net (fanout=1)        0.020   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O21_SW0/O
+    SLICE_X50Y87.X       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+    SLICE_X52Y88.G1      net (fanout=1)        0.631   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O39
+    SLICE_X52Y88.CLK     Tgck                  0.776   sys_ila/U0/I_YES_D.U_ILA/iSTAT_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                     11.889ns (6.419ns logic, 5.470ns route)
+                                                       (54.0% logic, 46.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (SLICE_X52Y88.G4), 322 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     10.114ns (data path - clock path skew + uncertainty)
+  Source:               sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      10.114ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y88.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iCORE_ID<1>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET
+    SLICE_X55Y88.F2      net (fanout=6)        1.210   sys_icon/U0/U_ICON/iCORE_ID<0>
+    SLICE_X55Y88.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+                                                       sys_icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT
+    SLICE_X51Y74.G3      net (fanout=29)       1.427   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+    SLICE_X51Y74.Y       Tilo                  0.612   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCE/iCFG_DIN
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE
+    SLICE_X55Y81.G4      net (fanout=47)       1.569   control0<9>
+    SLICE_X55Y81.COUT    Topcyg                0.871   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_lut<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<2>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<4>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<6>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.XB      Tcinxb                0.352   control0<35>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y89.G3      net (fanout=3)        0.800   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y89.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O37
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O4
+    SLICE_X52Y88.G4      net (fanout=1)        0.349   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O4
+    SLICE_X52Y88.CLK     Tgck                  0.776   sys_ila/U0/I_YES_D.U_ILA/iSTAT_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                     10.114ns (4.759ns logic, 5.355ns route)
+                                                       (47.1% logic, 52.9% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     9.884ns (data path - clock path skew + uncertainty)
+  Source:               sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      9.884ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y88.XQ      Tcko                  0.515   sys_icon/U0/U_ICON/iCORE_ID<1>
+                                                       sys_icon/U0/U_ICON/U_CMD/G_TARGET[13].I_NE0.U_TARGET
+    SLICE_X55Y88.F1      net (fanout=6)        1.032   sys_icon/U0/U_ICON/iCORE_ID<1>
+    SLICE_X55Y88.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+                                                       sys_icon/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT
+    SLICE_X51Y74.G3      net (fanout=29)       1.427   sys_icon/U0/U_ICON/iCORE_ID_SEL<0>
+    SLICE_X51Y74.Y       Tilo                  0.612   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCE/iCFG_DIN
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE
+    SLICE_X55Y81.G4      net (fanout=47)       1.569   control0<9>
+    SLICE_X55Y81.COUT    Topcyg                0.871   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_lut<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<2>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<4>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<6>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.XB      Tcinxb                0.352   control0<35>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y89.G3      net (fanout=3)        0.800   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y89.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O37
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O4
+    SLICE_X52Y88.G4      net (fanout=1)        0.349   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O4
+    SLICE_X52Y88.CLK     Tgck                  0.776   sys_ila/U0/I_YES_D.U_ILA/iSTAT_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      9.884ns (4.707ns logic, 5.177ns route)
+                                                       (47.6% logic, 52.4% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     9.581ns (data path - clock path skew + uncertainty)
+  Source:               sys_icon/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      9.581ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_icon/U0/U_ICON/U_SYNC/U_SYNC to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y86.YQ      Tcko                  0.567   sys_icon/U0/U_ICON/iSYNC
+                                                       sys_icon/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X67Y86.F1      net (fanout=2)        0.490   sys_icon/U0/U_ICON/iSYNC
+    SLICE_X67Y86.X       Tilo                  0.612   sys_icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X51Y74.G1      net (fanout=33)       1.614   sys_icon/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X51Y74.Y       Tilo                  0.612   sys_ila/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCE/iCFG_DIN
+                                                       sys_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE
+    SLICE_X55Y81.G4      net (fanout=47)       1.569   control0<9>
+    SLICE_X55Y81.COUT    Topcyg                0.871   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_lut<1>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<1>
+    SLICE_X55Y82.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<2>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<3>
+    SLICE_X55Y83.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<4>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<5>
+    SLICE_X55Y84.COUT    Tbyp                  0.103   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<6>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.CIN     net (fanout=1)        0.000   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<7>
+    SLICE_X55Y85.XB      Tcinxb                0.352   control0<35>
+                                                       sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y89.G3      net (fanout=3)        0.800   sys_ila/U0/U_XST_CONTROLBUS_WORKAROUND/CONTROL_XST_WORKAROUND_O_cmp_eq0000_wg_cy<8>
+    SLICE_X50Y89.Y       Tilo                  0.660   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O37
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O4
+    SLICE_X52Y88.G4      net (fanout=1)        0.349   sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O4
+    SLICE_X52Y88.CLK     Tgck                  0.776   sys_ila/U0/I_YES_D.U_ILA/iSTAT_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      9.581ns (4.759ns logic, 4.822ns route)
+                                                       (49.7% logic, 50.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_icon/U0/U_ICON/U_TDO_reg (SLICE_X64Y89.G2), 33 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     8.357ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[3].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A (RAM)
+  Destination:          sys_icon/U0/U_ICON/U_TDO_reg (FF)
+  Data Path Delay:      8.357ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[3].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A to sys_icon/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y6.DOA0     Tbcko                 2.446   sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[3].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[3].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A
+    SLICE_X54Y73.F2      net (fanout=1)        1.172   sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<3>
+    SLICE_X54Y73.X       Tif5x                 1.000   sys_ila/U0/I_YES_D.U_ILA/iDATA_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I2.U_MUX4/Mmux_O_3
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I2.U_MUX4/Mmux_O_2_f5
+    SLICE_X55Y89.G1      net (fanout=1)        0.712   sys_ila/U0/I_YES_D.U_ILA/iDATA_DOUT
+    SLICE_X55Y89.Y       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID<1>1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_DOUT
+    SLICE_X55Y89.F4      net (fanout=1)        0.020   control0<3>
+    SLICE_X55Y89.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID<1>1
+                                                       sys_icon/U0/U_ICON/iCORE_ID<1>1
+    SLICE_X64Y89.G2      net (fanout=1)        0.667   sys_icon/U0/U_ICON/iCORE_ID<1>1
+    SLICE_X64Y89.CLK     Tgck                  1.116   sys_icon/U0/U_ICON/iTDO
+                                                       sys_icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4
+                                                       sys_icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_2_f5
+                                                       sys_icon/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                      8.357ns (5.786ns logic, 2.571ns route)
+                                                       (69.2% logic, 30.8% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     8.078ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A (RAM)
+  Destination:          sys_icon/U0/U_ICON/U_TDO_reg (FF)
+  Data Path Delay:      8.078ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A to sys_icon/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y7.DOA0     Tbcko                 2.446   sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A
+    SLICE_X54Y73.G1      net (fanout=1)        0.893   sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<0>
+    SLICE_X54Y73.X       Tif5x                 1.000   sys_ila/U0/I_YES_D.U_ILA/iDATA_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I2.U_MUX4/Mmux_O_4
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I2.U_MUX4/Mmux_O_2_f5
+    SLICE_X55Y89.G1      net (fanout=1)        0.712   sys_ila/U0/I_YES_D.U_ILA/iDATA_DOUT
+    SLICE_X55Y89.Y       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID<1>1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_DOUT
+    SLICE_X55Y89.F4      net (fanout=1)        0.020   control0<3>
+    SLICE_X55Y89.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID<1>1
+                                                       sys_icon/U0/U_ICON/iCORE_ID<1>1
+    SLICE_X64Y89.G2      net (fanout=1)        0.667   sys_icon/U0/U_ICON/iCORE_ID<1>1
+    SLICE_X64Y89.CLK     Tgck                  1.116   sys_icon/U0/U_ICON/iTDO
+                                                       sys_icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4
+                                                       sys_icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_2_f5
+                                                       sys_icon/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                      8.078ns (5.786ns logic, 2.292ns route)
+                                                       (71.6% logic, 28.4% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     7.775ns (data path - clock path skew + uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A (RAM)
+  Destination:          sys_icon/U0/U_ICON/U_TDO_reg (FF)
+  Data Path Delay:      7.775ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 0.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A to sys_icon/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y9.DOA0     Tbcko                 2.446   sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i.A
+    SLICE_X54Y73.F1      net (fanout=1)        0.590   sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<2>
+    SLICE_X54Y73.X       Tif5x                 1.000   sys_ila/U0/I_YES_D.U_ILA/iDATA_DOUT
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I2.U_MUX4/Mmux_O_3
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I2.U_MUX4/Mmux_O_2_f5
+    SLICE_X55Y89.G1      net (fanout=1)        0.712   sys_ila/U0/I_YES_D.U_ILA/iDATA_DOUT
+    SLICE_X55Y89.Y       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID<1>1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_DOUT
+    SLICE_X55Y89.F4      net (fanout=1)        0.020   control0<3>
+    SLICE_X55Y89.X       Tilo                  0.612   sys_icon/U0/U_ICON/iCORE_ID<1>1
+                                                       sys_icon/U0/U_ICON/iCORE_ID<1>1
+    SLICE_X64Y89.G2      net (fanout=1)        0.667   sys_icon/U0/U_ICON/iCORE_ID<1>1
+    SLICE_X64Y89.CLK     Tgck                  1.116   sys_icon/U0/U_ICON/iTDO
+                                                       sys_icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4
+                                                       sys_icon/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_2_f5
+                                                       sys_icon/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                      7.775ns (5.786ns logic, 1.989ns route)
+                                                       (74.4% logic, 25.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_D_TO_J_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE (SLICE_X50Y84.F4), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      1.152ns (datapath - clock path skew - uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE (FF)
+  Data Path Delay:      1.152ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 30.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y84.XQ      Tcko                  0.412   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    SLICE_X50Y84.F4      net (fanout=1)        0.253   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+    SLICE_X50Y84.CLK     Tckf        (-Th)    -0.487   sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_D0
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat1
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    -------------------------------------------------  ---------------------------
+    Total                                      1.152ns (0.899ns logic, 0.253ns route)
+                                                       (78.0% logic, 22.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[3].U_FDRE (SLICE_X51Y85.G4), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      1.512ns (datapath - clock path skew - uncertainty)
+  Source:               sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[3].U_FDRE (FF)
+  Destination:          sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[3].U_FDRE (FF)
+  Data Path Delay:      1.512ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         control0<0> rising at 30.000ns
+  Destination Clock:    control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[3].U_FDRE to sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[3].U_FDRE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.YQ      Tcko                  0.409   sys_ila/U0/I_YES_D.U_ILA/U_STAT/iSTAT_CNT<2>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[3].U_FDRE
+    SLICE_X51Y85.G4      net (fanout=11)       0.288   sys_ila/U0/I_YES_D.U_ILA/U_STAT/iSTAT_CNT<3>
+    SLICE_X51Y85.CLK     Tckg        (-Th)    -0.815   sys_ila/U0/I_YES_D.U_ILA/U_STAT/iSTAT_CNT<2>
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/iSTAT_CNT<3>_rt
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[3].U_XORCY
+                                                       sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[3].U_FDRE
+    -------------------------------------------------  ---------------------------
+    Total                                      1.512ns (1.224ns logic, 0.288ns route)
+                                                       (81.0% logic, 19.0% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.776ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 27.224ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 30.000ns
+  Low pulse: 15.000ns
+  Low pulse limit: 1.388ns (Trpw)
+  Physical resource: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/din_latched/SR
+  Logical resource: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_TFDRE/SR
+  Location pin: SLICE_X49Y88.SR
+  Clock network: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/iCLR
+--------------------------------------------------------------------------------
+Slack: 27.224ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 30.000ns
+  High pulse: 15.000ns
+  High pulse limit: 1.388ns (Trpw)
+  Physical resource: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/din_latched/SR
+  Logical resource: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_TFDRE/SR
+  Location pin: SLICE_X49Y88.SR
+  Clock network: sys_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/iCLR
+--------------------------------------------------------------------------------
+Slack: 27.224ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 30.000ns
+  Low pulse: 15.000ns
+  Low pulse limit: 1.388ns (Trpw)
+  Physical resource: sys_icon/U0/U_ICON/iCOMMAND_GRP<1>/SR
+  Logical resource: sys_icon/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET/SR
+  Location pin: SLICE_X65Y84.SR
+  Clock network: sys_icon/U0/U_ICON/iSEL
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+No constraints were found to generate data for the Data Sheet Report section.
+Use the Advanced Analysis (-a) option or generate global constraints for each
+clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 5078 paths, 0 nets, and 1456 connections
+
+Design statistics:
+   Minimum period:   3.142ns{1}   (Maximum frequency: 318.269MHz)
+   Maximum path delay from/to any node:   3.142ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Oct 15 13:45:33 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 395 MB
+
+
+

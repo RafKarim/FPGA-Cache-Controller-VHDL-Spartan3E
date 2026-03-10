@@ -1,0 +1,14 @@
+EN sdram NULL /home/student2/ckelsey/coe758/project1/ipcore_dir/sdram.vhd sub00/vhpl00 1729014293
+EN cache_mem NULL /home/student2/ckelsey/coe758/project1/ipcore_dir/cache_mem.vhd sub00/vhpl08 1729014301
+AR sdram sdram_a /home/student2/ckelsey/coe758/project1/ipcore_dir/sdram.vhd sub00/vhpl01 1729014294
+AR ila ila_a /home/student2/ckelsey/coe758/project1/ipcore_dir/ila.vhd sub00/vhpl05 1729014298
+AR icon icon_a /home/student2/ckelsey/coe758/project1/ipcore_dir/icon.vhd sub00/vhpl03 1729014296
+EN cache_controller NULL /home/student2/ckelsey/coe758/project1/cache_controller.vhd sub00/vhpl12 1729014305
+EN icon NULL /home/student2/ckelsey/coe758/project1/ipcore_dir/icon.vhd sub00/vhpl02 1729014295
+AR sdram_controller behavioral /home/student2/ckelsey/coe758/project1/sdram_controller.vhd sub00/vhpl11 1729014304
+EN vio NULL /home/student2/ckelsey/coe758/project1/ipcore_dir/vio.vhd sub00/vhpl06 1729014299
+EN sdram_controller NULL /home/student2/ckelsey/coe758/project1/sdram_controller.vhd sub00/vhpl10 1729014303
+AR cache_controller behavioral /home/student2/ckelsey/coe758/project1/cache_controller.vhd sub00/vhpl13 1729014306
+AR cache_mem cache_mem_a /home/student2/ckelsey/coe758/project1/ipcore_dir/cache_mem.vhd sub00/vhpl09 1729014302
+AR vio vio_a /home/student2/ckelsey/coe758/project1/ipcore_dir/vio.vhd sub00/vhpl07 1729014300
+EN ila NULL /home/student2/ckelsey/coe758/project1/ipcore_dir/ila.vhd sub00/vhpl04 1729014297

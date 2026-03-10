@@ -1,0 +1,15 @@
+# Output products list for <sdram>
+_xmsgs/pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_v6_3_readme.txt
+sdram.asy
+sdram.gise
+sdram.ngc
+sdram.vhd
+sdram.vho
+sdram.xco
+sdram.xise
+sdram_flist.txt
+sdram_upgrade.txt
+sdram_xmdf.tcl
+summary.log

@@ -1,0 +1,15 @@
+# Output products list for <cache_mem>
+_xmsgs/pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_v6_2_readme.txt
+cache_mem.asy
+cache_mem.gise
+cache_mem.ngc
+cache_mem.sym
+cache_mem.vhd
+cache_mem.vho
+cache_mem.xco
+cache_mem.xise
+cache_mem_flist.txt
+cache_mem_xmdf.tcl
+summary.log
